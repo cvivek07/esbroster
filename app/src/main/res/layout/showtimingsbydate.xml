@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/column_date"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/datestring"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:typeface="sans"
+            android:layout_marginStart="15dp"
+
+            />
+
+        <TextView
+            android:id="@+id/column_name"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/namestring"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:id="@+id/column_shift"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/shiftstring"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="40dp" />
+
+
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView_bydate_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:clickable="false"
+        android:layout_marginStart="15dp"
+        >
+    </ListView>
+
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/bright_foreground_inverse_material_light"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+
+</android.support.v4.widget.DrawerLayout>

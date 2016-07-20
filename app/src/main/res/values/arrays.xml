@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="shift_selector">
+        <item>Select Shift Timings</item>
+        <item>0500 - 1430</item>
+        <item>0600 - 1530</item>
+        <item>0700 - 1630</item>
+        <item>0900 - 1830</item>
+        <item>1000 - 1930</item>
+        <item>1100 - 2030</item>
+        <item>1200 - 2130</item>
+        <item>1300 - 2230</item>
+        <item>1500 - 2330</item>
+        <item>1700 - 0130</item>
+        <item>2200 - 0630</item>
+        <item>2200 - 0730</item>
+
+
+    </string-array>
+    <string-array name="listview_labels">
+        <item>NAME:</item>
+        <item>DATE:</item>
+        <item>SHIFT:</item>
+    </string-array>
+</resources>

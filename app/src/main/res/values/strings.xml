@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Timesheet</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_text">SELECT YOUR NAME:</string>
+    <string name="title_mainpage">ESB Roster</string>
+    <string name="fromdate_text">DATE:</string>
+    <string name="todate_text">END DATE:</string>
+
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_date_picker">DatePicker</string>
+    <string name="shift_name">SELECT SHIFT:</string>
+    <string name="button_text">SAVE TIMINGS</string>
+    <string name="savetimings_title">Manage Timings</string>
+    <string name="admin_button">Admin</string>
+    <string name="button_textformembers">CHECK MY TIMINGS</string>
+    <string name="buttonbydate_textformembers">CHECK TIMINGS BY DATE</string>
+    <string name="DatePickerButton_text">DATE</string>
+    <string name="admin_settings">Admin</string>
+    <string name="app_name1">Check Timings</string>
+    <string name="delbutton_text">DELETE TIMINGS</string>
+    <string name="updatebutton_text">UPDATE TIMINGS</string>
+    <string name="showtimings_title">Your Shift Timing</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="deletebutton_text">DELETE EXISTING USER</string>
+    <string name="addbutton_text">ADD NEW USER</string>
+    <string name="adduseractivity_title">Add New User</string>
+    <string name="submit_button_text">SUBMIT</string>
+    <string name="checktimingsbydate_label">Check Timings By Date</string>
+    <string name="showtimingsbydate_label">Showing shifts as per the date</string>
+    <string name="checktimingsbutton_text">Check Timings</string>
+    <string name="checktimingsbydate__text">Check Timings By Date</string>
+    <string name="managetimings__text">Manage Timings</string>
+    <string name="addnewuser_text">Add New User</string>
+    <string name="deleteuseractivity_label">Remove Existing User</string>
+    <string name="settings_password">Enter Password</string>
+    <string name="settings_password2">Enter Password again</string>
+    <string name="settings_pwd_equal">Password matches</string>
+    <string name="settings_pwd_not_equal">Password does not match</string>
+    <string name="datehint">Select Date(YYYY-MM-DD)</string>
+    <string name="namehint">Enter Your Name</string>
+    <string name="datestring">DATE</string>
+    <string name="namestring">NAME</string>
+    <string name="shiftstring">SHIFT</string>
+    <string name="logintext">Login</string>
+    <string name="cancelstring">Cancel</string>
+    <string name="enterpasswrodhint">Enter Password</string>
+    <string name="enterpasswrodhintagain">Enter Password again</string>
+    <string name="addneworganisationhint">Enter Organisation Name</string>
+    <string name="button_addneworg">ADD NEW ORGANISATION</string>
+    <string name="email">Enter your email</string>
+    <string name="signed_in_fmt">Logged in as: %s</string>
+    <string name="facebook_app_id">928086353968994</string>
+
+    <string-array name="titles">
+        <item>Check Timings</item>
+        <item>Check Timings By Date</item>
+        <item>Manage Timings</item>
+        <item>Add New User</item>
+        <item>Remove Existing User</item>
+        <item>Home</item>
+    </string-array>
+</resources>
