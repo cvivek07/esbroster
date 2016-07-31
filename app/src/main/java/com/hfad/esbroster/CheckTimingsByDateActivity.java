@@ -21,6 +21,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -53,7 +57,7 @@ public class CheckTimingsByDateActivity extends ActionBarActivity {
 
     final Calendar mCalendar = Calendar.getInstance();
 
-    private static final String CHECKTIMINGSBYDATE_URL = "http://www.android2.in/timesheet/checktimingsbydate.php";
+    private static final String CHECKTIMINGSBYDATE_URL = "http://www.android2.in/shift_timings_allotter/checktimingsbydate.php";
 
 
 
@@ -69,7 +73,10 @@ public class CheckTimingsByDateActivity extends ActionBarActivity {
         drawerList = (ListView) findViewById(R.id.drawer); // for drawer
         mActivityTitle = getTitle().toString(); // for drawer
 
-
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3571727848659159~2627701427");
+        AdView adView1 = (AdView) findViewById(R.id.adView1);
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        adView1.loadAd(adRequest1);
 
 
         mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, titles); // for drawer

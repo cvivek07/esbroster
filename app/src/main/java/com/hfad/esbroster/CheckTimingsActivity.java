@@ -23,6 +23,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.*;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -70,7 +74,7 @@ public class CheckTimingsActivity extends ActionBarActivity {
     private String mActivityTitle; // for drawer
 
 
-    private static final String LOGIN_URL = "http://www.android2.in/timesheet/checktimings.php";
+    private static final String LOGIN_URL = "http://www.android2.in/shift_timings_allotter/checktimings.php";
     private static final String SHOWNAMES_URL = "http://www.android2.in/shift_timings_allotter/shownames.php";
 
 
@@ -80,9 +84,15 @@ public class CheckTimingsActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
       //  getWindow().setEnterTransition(animFadein);
        // overridePendingTransition(R.anim.slide_right, R.anim.slide_right);
         setContentView(R.layout.checktimings);
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3571727848659159~2627701427");
+        AdView adView1 = (AdView) findViewById(R.id.adView1);
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        adView1.loadAd(adRequest1);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         //------------------------------------------------------
        // animFadein = AnimationUtils.loadAnimation(getApplicationContext(),

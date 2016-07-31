@@ -56,6 +56,8 @@
     <string name="email">Enter your email</string>
     <string name="signed_in_fmt">Logged in as: %s</string>
     <string name="facebook_app_id">928086353968994</string>
+    <string name="mainactivitytitle">Shift Timings Allotter</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3571727848659159/7424611428</string>
 
     <string-array name="titles">
         <item>Check Timings</item>

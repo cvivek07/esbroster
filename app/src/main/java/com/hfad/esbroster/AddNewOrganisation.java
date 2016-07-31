@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.*;
+import org.apache.http.message.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -28,10 +28,7 @@ public class AddNewOrganisation extends ActionBarActivity {
     EditText editText;
     Button button;
 
-    //private static final String ADDNEWORG_URL = "http://www.android2.in/timesheet/addneworg.php";
-
-
-    private static final String ADDNEWORG_URL = "http://10.0.3.2/esb_roster_database/addneworg.php";
+    private static final String ADDNEWTEAM_URL = "http://www.android2.in/shift_timings_allotter/addnewteam.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +77,7 @@ public class AddNewOrganisation extends ActionBarActivity {
 
             // parameters.add(new BasicNameValuePair("enddate", enddate_value1));
             try {
-                JSONObject jsonObject = jsonParser.makeHttpRequest(ADDNEWORG_URL, "POST", parameters);
+                JSONObject jsonObject = jsonParser.makeHttpRequest(ADDNEWTEAM_URL, "POST", parameters);
 
                 // c = jsonObject.getString(KEY_NAME);
 

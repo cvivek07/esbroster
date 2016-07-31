@@ -1,124 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hfad.esbroster" >
+
     <!-- To access internet -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- To access accounts configured on device -->
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> <!-- To retrieve the account name (email) as part of sign-in: -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@drawable/timesheet_icon"
         android:label="Shift Timings Allotter"
-        android:theme="@style/MyMaterialTheme"
-        >
-
-
+        android:theme="@style/MyMaterialTheme" >
         <activity
             android:name=".CheckTimingsActivity"
             android:label="@string/app_name1"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".SaveTimingsActivity"
             android:label="@string/savetimings_title"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".ShowTimingsActivity"
             android:label="@string/showtimings_title"
-            android:theme="@style/AppCompatAlertDialogStyle"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatAlertDialogStyle" >
         </activity>
-
         <activity
             android:name=".DrawerActivity"
             android:label="Timesheet"
-            android:theme="@style/MyMaterialTheme"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
-
         <activity
             android:name=".AddUserActivity"
             android:label="@string/adduseractivity_title"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".CheckTimingsByDateActivity"
             android:label="@string/checktimingsbydate_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".ShowTimingsByDateActivity"
             android:label="@string/showtimingsbydate_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-        <meta-data
-            android:name="android.app.searchable"
-            android:resource="@xml/searchable">
-        </meta-data>
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" >
+            </meta-data>
         </activity>
         <activity
             android:name=".DeleteUserActivity"
             android:label="@string/deleteuseractivity_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".SearchListview"
             android:label="@string/deleteuseractivity_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
             android:name=".SignInActivity"
-            android:label="@string/deleteuseractivity_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
+            android:label="@string/mainactivitytitle"
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
             <meta-data
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".AddNewOrganisation"
             android:label="@string/deleteuseractivity_label"
-            android:theme="@style/MyMaterialTheme"
-            android:parentActivityName="com.hfad.esbroster.DrawerActivity"
-            android:screenOrientation="portrait">
-
+            android:parentActivityName=".DrawerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

@@ -20,6 +20,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 
 /**
@@ -45,6 +48,11 @@ public class DrawerActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.draweractivity_layout);
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3571727848659159~2627701427");
+        AdView adView1 = (AdView) findViewById(R.id.adView1);
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        adView1.loadAd(adRequest1);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for drawer
         getSupportActionBar().setHomeButtonEnabled(true); // for drawer
         titles = getResources().getStringArray(R.array.titles); // for drawer

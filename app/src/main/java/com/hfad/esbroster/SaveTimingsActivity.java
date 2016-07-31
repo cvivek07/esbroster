@@ -450,7 +450,7 @@ JSONParser jsonParser1 = new JSONParser();
         @Override
         protected String doInBackground(String... params) {
             int success1;
-            String name_value1 = edittext_name.getText().toString();
+            String name_value1 = spinner1.getSelectedItem().toString();
             String startdate_value1 = editText1.getText().toString();
 
             String shift_value1 = spinner2.getSelectedItem().toString();
@@ -528,7 +528,7 @@ JSONParser jsonParser1 = new JSONParser();
         @Override
         protected String doInBackground(String... params) {
             int success2;
-            String name_value2 = edittext_name.getText().toString();
+            String name_value2 = spinner1.getSelectedItem().toString();
             String startdate_value2 = editText1.getText().toString();
 
             String shift_value2 = spinner2.getSelectedItem().toString();

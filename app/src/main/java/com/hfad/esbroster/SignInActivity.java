@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -28,7 +32,7 @@ import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
 
-public class SignInActivity extends Activity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
+public class SignInActivity extends ActionBarActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
 
    // TextView tv_username, tv_Email;
@@ -43,11 +47,12 @@ public class SignInActivity extends Activity implements View.OnClickListener, Go
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signinpage);
-
-       // tv_username= (TextView) findViewById(R.id.tv_username);
-       // tv_Email = (TextView) findViewById(R.id.tv_Email);
-       // imageView = (ImageView) findViewById(R.id.imgProfilePic);
-
+        //Google ads Start
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3571727848659159~2627701427");
+        AdView adView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        //Google ads End
 
         //Register both button and add click listener
         signInbutton = (SignInButton) findViewById(R.id.sign_in_button);
@@ -55,7 +60,7 @@ public class SignInActivity extends Activity implements View.OnClickListener, Go
         signInbutton.setOnClickListener(this);
         //signOutbutton.setOnClickListener(this);
 
-
+// Google Sign In Start
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -64,6 +69,7 @@ public class SignInActivity extends Activity implements View.OnClickListener, Go
 
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+        // Google Sign In End
 
     }
     protected void onStart(){
@@ -100,7 +106,7 @@ public class SignInActivity extends Activity implements View.OnClickListener, Go
         startActivityForResult(signInIntent, RC_SIGN_IN);
 
        // signOutbutton.setVisibility(View.VISIBLE);
-        signInbutton.setVisibility(View.GONE);
+        //signInbutton.setVisibility(View.GONE);
 
 
     }

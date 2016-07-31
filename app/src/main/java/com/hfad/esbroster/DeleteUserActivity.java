@@ -21,6 +21,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
@@ -41,7 +45,7 @@ public class DeleteUserActivity extends ActionBarActivity {
     JSONParser jsonParser = new JSONParser();
 
 
-    private static final String DELETEUSER_URL = "http://www.android2.in/timesheet/deleteuser.php";
+    private static final String DELETEUSER_URL = "http://www.android2.in/shift_timings_allotter/deleteuser.php";
 
     private static final String TAG_SUCCESS = "success";
 
@@ -71,7 +75,12 @@ public class DeleteUserActivity extends ActionBarActivity {
         mdrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout); // for drawer
         drawerList = (ListView) findViewById(R.id.drawer); // for drawer
         mActivityTitle = getTitle().toString(); // for drawer
-
+//Google ads Start
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3571727848659159~2627701427");
+        AdView adView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        //Google ads End
 
 
 
